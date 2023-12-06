@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment6</title>
+</head>
+<body>
+    
+    <h1>Check Factorial</h1>
+    <form>
+        
+        <input type="number" name="number" id="num">
+        <input type="button" name="button"  value="button" id="btn" onclick="fact()">
+        
+    </form>
+    <h2 id="display"></h2>
+
+
+
+</body>
+</html>
+<script>
+
+    function fact(){
+
+        let no = document.getElementById("num").value;
+
+        let res=1;
+
+        for(let i=1;i<=no;i++){
+            res=res*i;
+        }
+
+        document.getElementById("display").innerHTML=`factorial is ${res}`;
+        alert(res);
+    }
+
+
+</script>

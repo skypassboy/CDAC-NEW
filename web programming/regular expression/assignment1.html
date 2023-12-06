@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Validate Form</title>
+
+    <style>
+
+    </style>
+    <script>
+
+        function validateForm() {
+
+
+            var upattern = /^[A-Za-z0-9._-]{5,15}$/
+            var uname = document.getElementById("username").value;
+
+            if (upattern.test(uname)) {
+                document.getElementById("unspan").innerHTML = "";
+                document.getElementById("username").value = uname;
+            }
+            else {
+                document.getElementById("unspan").innerHTML = "Invalid Syntax";
+                document.getElementById("username").value = "";
+                document.getElementById("username").focus();
+                return;
+            }
+
+            //validate pwd
+            var pwd = document.getElementById("password").value;
+            var pwdpattern = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&])[A-Za-z0-9!@#$%^&*]{5,}$/;
+
+            if (pwdpattern.test(pwd)) {
+                document.getElementById("pdspan").innerHTML = "";
+                document.getElementById("password").value = pwd;
+            }
+            else {
+                document.getElementById("pdspan").innerHTML = "Invalid Syntax";
+                document.getElementById("password").value = "";
+                document.getElementById("password").focus();
+                return;
+            }
+            alert("now submitting...");
+            console.log("hi");
+            document.f1.submit();
+            alert(document.f1.nodeName);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <form name="f1" method="get" id="f1">
+        <label for="username">username :</label>
+        <input type="text" name="username" id="username" /> <span id="unspan"></span><br />
+
+        <label for="password">password :</label>
+        <input type="password" name="password" id="password" /><span id="pdspan"></span> <br />
+
+        <input type="button" name="mysubmit" id="mysubmit" value="submit" onclick="validateForm()" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <style>
+        #maindiv {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+
+        #subdiv {
+            border: 1px solid red;
+            width: 70%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="maindiv">
+        <div id="subdiv">
+            <p style="color: red; font-size: 25px; font-weight: bold; font-style: italic;margin-top: -1px;"> Express
+                Registration </p>
+            <form id="form">
+                <table id="table">
+                    <tr>
+                        <td>Enamil :</td>
+                        <td>
+                            <datalist id="email">
+                                <option>Ritesh@gmail.com</option>
+                                <option>Gaurav@gmail.com</option>
+                                <option>Raghu@gmail.com</option>
+                                <option>Chiranjivi@gmail.com</option>
+                                <option>priyanka@gmail.com</option>
+                            </datalist>
+                            <input type="email" name="email" id="Enamil" placeholder="eg. xyz@gmail.com" maxlength="25"
+                                list="email" required>
+                            *
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Name :</td>
+                        <td>
+                            <datalist id="names">
+                                <option>Ritesh</option>
+                                <option>Gaurav</option>
+                                <option>Raghu</option>
+                                <option>Chiranjivi</option>
+                                <option>priyanka</option>
+                            </datalist>
+                            <input type="text" name="uid" list="names" required>
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+INDEX VERSION 1.134+D:\java workspace DAC_sep23\.metadata\.plugins\org.eclipse.jdt.core
+1285073286.index
+503609477.index
+3620590397.index
+3158648900.index
+1865797976.index
+1816622581.index
+3209452961.index
+350805714.index
+3818434431.index
+425685228.index

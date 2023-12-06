@@ -1,0 +1,28 @@
+package apps;
+
+import office.staff.Emp;
+import office.utility.Person;
+
+public class EmpDemo {
+
+	public static void main(String[] args) {
+		//Emp e = new Emp();
+		//e.display();  //dynamically
+		
+		//substitution
+		//expecting person - replaced by emp
+		//super class reference - subclass instance
+		//Person p = new Emp();
+		 
+		//Emp e1 = new Person();
+		//p.display();
+		
+		Person p = new Emp();
+		System.out.println(p.toString());
+		System.out.println("*******************");
+		Person p1 = new Emp("Bakul",1,1,1999,1001,10000.0);
+		System.out.println(p1);   //p1.toString()
+
+	}
+
+}

@@ -1,0 +1,91 @@
+1. select ename from emp where sal=(select max(sal) from emp);
+2. select ename from emp where deptno = (select deptno from emp where ename='martin');
+3. select ename from emp where deptno in (select deptno from emp where ename='martin'or ename='smith'); 
+4. select * from emp where sal > all (select sal from emp where ename = 'allen' or ename = 'smith'); 
+5. update table emp set sal = (select sal from emp where ename='jones') where ename = 'smith';
+(reserve for later)
+6. select ename,job,deptno from emp where job in (select job from emp where empno = 7499);
+7. select ename,job,deptno from emp where job > all (select job from emp where empno = 7499);
+8. select ename from emp where sal  = (select min(sal) from emp); 
+9. select count(*),extract(year from hiredate) from emp group by extract(year from hiredate) order by count(*) desc limit 1;
+10. select ename,empno,sal from emp where sal > (select avg(sal) from emp );
+11. select empno, ename, sal from emp where mgr = any(select empno from emp where job='manager' and ename like 'j%');
+12. SELECT EMPNO, ENAME, JOB, SAL FROM emp WHERE SAL > (SELECT MAX(SAL) FROM emp WHERE JOB = 'ANALYST');
+13. select ename from emp where job!='manager';
+14.select * from emp where sal between (select min(sal) from emp) and sal<2500;
+16.SELECT EMPNO, ENAME, JOB
+FROM emp
+WHERE JOB <> 'MANAGER';
+17.
+18.SELECT *
+FROM emp
+WHERE COMM IS NULL;
+19. SELECT *
+FROM emp
+WHERE COMM IS NULL AND ENAME LIKE 'S%';
+20.select empno,ename,deptno from emp where mgr = 7698;
+21.select ename from emp where sal > (select sal from emp where ename='smith');
+22.SELECT DEPTNO, COUNT(*) AS EmployeeCount
+FROM emp
+WHERE SAL > 1500
+GROUP BY DEPTNO;
+23.select * from emp where deptno = 10;
+24.SELECT *
+FROM emp
+WHERE (DEPTNO IN (20, 30)) AND COMM IS NULL;
+25.SELECT COUNT(*) as emp_with_comission
+FROM emp
+WHERE COMM IS NOT NULL;
+26.
+27.select job from emp;
+28. select right(ename,3) as lastthreeletters from emp;
+29.SELECT
+    CONCAT(
+        LOWER(SUBSTRING(ENAME, 1, 3)), 
+        LOWER(RIGHT(JOB, 2)),          
+        '@knowit.com'                  
+    ) AS Email
+FROM emp;
+30.UPDATE emp
+SET SAL = SAL * 1.10
+WHERE DATEDIFF(CURDATE(), HIREDATE) > 40;
+31.SELECT
+    e.EMPNO AS ENO,
+    e.ENAME,
+    e.DEPTNO,
+    d.DNAME
+FROM
+    emp e
+INNER JOIN
+    dept d ON e.DEPTNO = d.DEPTNO
+WHERE
+    e.SAL BETWEEN 1000 AND 3000;
+32.SELECT
+    e.EMPNO,
+    e.ENAME,
+    e.DEPTNO
+FROM
+    emp e
+INNER JOIN
+    dept d ON e.DEPTNO = d.DEPTNO
+WHERE
+    d.DNAME = 'sales';
+33.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

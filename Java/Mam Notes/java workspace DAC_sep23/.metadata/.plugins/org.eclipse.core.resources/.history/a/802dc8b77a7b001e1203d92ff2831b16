@@ -1,0 +1,38 @@
+package demos;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		/*List objects = new ArrayList();
+		//objects.add
+		objects.add("welcome");
+		objects.add(new Integer(10));
+		objects.add(Calendar.getInstance().getTime());
+		
+		for(Object o : objects)
+			System.out.println(((String)o).toUpperCase());
+		*/
+		List<String> words = new ArrayList<>();
+		words.add("welcome");
+		words.add("hi");
+		words.add("object");
+		words.add("html");
+		words.add("jquery");
+		words.add("welcome");
+		words.add("bootstrap");
+		words.add(null);
+		
+		
+		System.out.println("No of elements : "+words.size());
+		
+		
+		
+		
+		
+	}
+
+}

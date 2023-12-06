@@ -1,0 +1,46 @@
+package apps;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class CharOccurence {
+	public static void main(String[] args) {
+		String s = "coccacola";
+		//accept the string from the user
+		//Map<Character, Integer> occ = new HashMap<>();
+		Map<Character, Integer> occ = new TreeMap<>();
+		for(int i=0;i<s.length();i++)
+		{
+			char ch = s.charAt(i);
+			if(occ.containsKey(ch))
+			{
+				//key(character) present
+				//increment the count
+				int n = occ.get(ch);
+				n++;
+				occ.replace(ch, n);
+			}
+			else
+			{
+				//key(character) not present
+				//put the element
+				occ.put(ch, 1);
+			}			
+		}
+		//occ.forEach((Character ch, Integer n)->{System.out.println(ch+" : "+n);});
+		
+		Set<Entry<Character, Integer>> set = occ.entrySet();
+		for(Entry<Character, Integer> e : set)
+		{
+			System.out.println(e.getKey()+" : "+e.getValue());
+		}
+			
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,62 @@
+1. create table course1
+   ( cid int primary key,
+     cname varchar(25) not null unique,
+     fees int not null,
+     duration_In_hours int not null
+   );
+
+
+insert into course1 values(1,'c-programming',5000,40);
+insert into course1 values(2,'cpp',8000,80);
+insert into course1 values(3,'core java',10000,100);
+insert into course1 values(4,'oracle',12000,80);
+insert into course1 values(5,'mongoDB',8000,50);
+insert into course1 values(6,'WP',20000,150);
+
+
+
+2. create table trainer1
+   ( tid char(2) primary key,
+     tname varchar(25) not null,
+     sal int not null,
+     cid int,
+     foreign key(cid) references course1(cid) on update cascade
+   );
+
+
+insert into trainer1 values('t1','smita',20000,1);
+insert into trainer1 values('t2','amit',25000,2);
+insert into trainer1 values('t3','rohan',28000,3);
+insert into trainer1 values('t4','archana',25000,4);
+insert into trainer1 values('t5','raj',30000,5);
+insert into trainer1 values('t6','rutuja',36000,6);
+
+3. update course1 set fees = fees*1.08 where cname = 'wp';
+4. select count(cname) from course1;
+5. update course1 set cid = 7 where cname = 'cpp';
+6. select * from course1 where fees  between 25000 and 30000;
+7. select sum(fees) from course1;
+8.select cname,min(fees) from course1;(Wrong but works)
+	or
+select cname,fees from course1 order by fees limit 1;
+9.select * ,min(sal) from trainer1;(wrong)
+	or
+select * from trainer1 order by sal desc limit 1;
+10. select cname from course1 order by 'duration_in_hours' limit 1;
+11. will not implement
+12. alter table trainer1 add insentive float(5,2);
+13.update trainer1 set insentive = 100 where cid =7;
+14.update trainer1 set insentive = 800 where cid =1;
+15.select * from trainer1 where insentive is not null;
+16.select count(*) from trainer1 where insentive is null;
+17.select * from emp where ename like '%e%';
+18.select *,  sal+ifnull(insentive,0) from trainer1;
+19.delete from course1 where cid=7;(cant delete because in child table);
+20.select count(*), cid from trainer1 group by cid;
+21. select t.tid, t.tname,c.cid,c.cname from trainer1 t, course1 c where t.cid=c.cid;
+22.select t.tid, t.tname,c.cid,c.cname,duration_in_hours from trainer1 t, course1 c where t.cid=c.cid and duration_in_hours>50;
+23.select count(*) from course1 where fees>10000;
+24.select  * from course1 order by duration_in_hours desc; 
+25.select * from course1 order by fees limit 3;
+26.alter table trainer1 add email varchar(20);
+27.update trainer1 set email  = concat(left(tname,3),left(tid,2),'@knowit.com');

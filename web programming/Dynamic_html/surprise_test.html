@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Two Digits Prime</title>
+</head>
+
+<body>
+
+    <form>
+
+        <input type="button" name="button" id="btn" value="Show Two Digit Primes" onclick="showPrime()">
+    </form>
+
+    <ul id="ulist">
+        <li>
+
+        </li>
+    </ul>
+
+</body>
+
+</html>
+<script>
+
+    function checkPrime(no) {
+
+        let cnt = 0;
+
+        if (no < 2) {
+            return false;
+        }
+        else {
+
+            for (let i = 1; i <= no; i++) {
+                if (no % i == 0) {
+                    cnt++;
+                }
+            }
+
+            if (cnt == 2) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+
+
+    let bag = "";
+    function showPrime() {
+
+        for (let i = 10; i <= 99; i++) {
+
+            if (checkPrime(i) === true) {
+                bag = bag + "<li>" + i + "</li>" + "<br>";
+                document.getElementById("ulist").innerHTML = bag;
+            }
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+</script>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <style>
+        #maindiv {
+            border: 1px solid rgb(117, 215, 117);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #subdiv {
+            border: 1px solid black;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        #table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div id="maindiv">
+
+        <div id="subdiv">
+
+            <form id="form">
+                <p style="color: red; font-size: 25px; font-weight: bold; font-style: italic;margin-top: -1px;"> Express
+                    Registration </p>
+                <p style="margin-top: -15px; font-weight: bold;">Please note that all fields that have an asterisk (*)
+                    are required to process your registration.</p>
+
+                <table id="table">
+
+                    <tr style="background-color: rgb(55, 34, 34);">
+                        <th colspan="2" style="text-align: left; color: white;">Personal Details</th>
+                        <th colspan="2" style="text-align: left; color: white;">Address</th>
+
+                    </tr>
+
+                    <tr>
+                        <td>Title :</td>
+                        <td>
+                            <input type="text" type="text">
+                            <p style="margin-top: -2px;">(Mr/Mrs/Miss)</p>
+                        </td>
+                        <td>Address :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>First Name :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td></td>
+                        <td>
+                            <input type="text" type="text">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Name :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td>Town :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email Address :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td>Country/State</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Telephone :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td>Country :</td>
+                        <td>
+                            <select>
+                                <option value="United States">United States</option>
+                                <option value="India">India</option>
+                                <option value="China">China</option>
+                            </select>
+                            *
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Cell Phone :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td>Postcode :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Comment :</td>
+                        <td colspan="4">
+                            <textarea name="comment" id="comment" cols="30" rows="10" style="width: 450px;"></textarea>
+                        </td>
+                    </tr>
+                    <tr style="border: 5px solid teal;">
+                        <td>Feedback :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td>Hear us from :</td>
+                        <td>
+                            <input type="checkbox" value="Friend" id="friend">
+                            <label for="friend">Friend</label>
+                            <input type="checkbox" value="Site Owner" id="site">
+                            <label for="site">Site Owner</label> <br>
+                            <input type="checkbox" name="Search Engine" id="search">
+                            <label for="search">Search Engine</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="background-color: rgb(55, 34, 34); color: white;">Security Details</td>
+                    </tr>
+
+                    <tr>
+                        <td>Choose Password :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                        <td>Confirm Password :</td>
+                        <td>
+                            <input type="text" type="text">
+                            *
+                        </td>
+                    </tr>
+                </table>
+
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

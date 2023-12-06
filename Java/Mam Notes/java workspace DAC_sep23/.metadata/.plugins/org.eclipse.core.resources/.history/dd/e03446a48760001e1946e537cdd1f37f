@@ -1,0 +1,11 @@
+package threadsync1;
+
+public class PrintingTask implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

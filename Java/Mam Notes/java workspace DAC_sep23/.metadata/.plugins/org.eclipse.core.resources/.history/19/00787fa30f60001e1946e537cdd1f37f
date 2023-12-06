@@ -1,0 +1,61 @@
+package exceptiondemos;
+
+import java.util.Scanner;
+
+import customexceptions.InvalidUsernameException;
+
+public class UserDefinedExceptionDemo {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter user name : ");
+		String uname = sc.next();
+		
+		boolean flag = true;
+		if( uname.length()< 6 || uname.length() > 12 )
+		{
+			flag= false;
+		}
+		else
+		{
+			for(int i=0;i<uname.length();i++)
+			{
+				char ch = uname.charAt(i);
+				if(ch >= 'A' && ch<='Z')
+				{
+					flag = true;
+				}
+				else if(ch >= 'a' && ch <= 'z')
+				{
+					flag = true;
+				}
+				else if(ch == '.')
+				{
+					flag = true;
+				}
+				else if(ch == '_')
+				{
+					flag = true;
+				}
+				else
+				{
+					flag = false;
+					break;
+				}
+				
+			}
+			if(flag == true)
+			{
+				System.out.println("Valid user name");
+			}
+			else
+			{
+				throw new InvalidUsernameException();
+			}
+		}
+		
+
+	}
+
+}

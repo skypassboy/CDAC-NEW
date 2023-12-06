@@ -1,0 +1,46 @@
+package reflection;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+public class KnowingTheClass 
+{
+	public static void main(String[] args) throws ClassNotFoundException
+	{
+		//fully qualified name
+		Class c = Class.forName("java.lang.String");
+		
+		System.out.println("Simple name : "+c.getSimpleName());
+		System.out.println("Package : "+c.getPackage());
+		System.out.println("Super class : "+c.getSuperclass());
+		System.out.println("Modifiers : "+c.getModifiers());
+		if(Modifier.isAbstract(c.getModifiers()))
+			System.out.println("It is abstract class");
+		if(Modifier.isFinal(c.getModifiers()))
+			System.out.println("It is final class");
+				
+		System.out.println("*******************");
+		Class [] ifaces = c.getInterfaces();
+		for(Class iface : ifaces)
+			System.out.println(iface.getSimpleName());
+		System.out.println("***************");
+		Constructor [] allcons = c.getConstructors();
+		for(Constructor cons : allcons)
+			System.out.println(cons);  //toString
+		System.out.println("*****************");
+		Method [] allmethods = c.getMethods();
+		for(Method m : allmethods)
+		{
+			System.out.println(m.getName()+" returns  "+m.getReturnType()+" and has para count  "+m.getParameterCount() );
+		}
+		
+		
+		
+		
+		/*String s1 = new String("welcome");
+		s1.*/
+		
+	}
+
+}

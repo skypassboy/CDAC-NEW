@@ -1,0 +1,12 @@
+package office.staff;
+
+import office.utility.Person;
+
+public class Emp extends Person {
+	//extra state
+	private int empid;
+	private double salary;
+	
+	
+
+}

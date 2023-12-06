@@ -1,0 +1,27 @@
+package threadsync;
+
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.InputStreamReader;
+
+public class DivisorThreadDemo {
+
+	public static void main(String[] args) throws Exception
+	{
+		//accept number from user
+		//create file writer
+		//create a thread - start
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter the number : ");
+		int n = Integer.parseInt(br.readLine());
+		
+		FileWriter fw = new FileWriter("D:/myfiles/divisors.dat");
+		
+		//newly created state
+		DivisorThread dt1 = new DivisorThread(n, fw);
+		dt1.getT().start();
+		
+
+	}
+
+}

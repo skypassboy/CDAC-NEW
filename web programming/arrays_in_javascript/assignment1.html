@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment 1</title>
+</head>
+
+<body>
+
+
+    <button onclick="addNumbers()" value="Add Numbers In Array">Add Numbers In Array</button>
+
+
+    <h1 id="head">
+
+    </h1>
+
+    <h2 id="head2">
+
+    </h2>
+    <ol id="ulist">
+
+    </ol>
+
+</body>
+
+</html>
+<script>
+
+    let arr = [];
+
+    function addNumbers() {
+
+
+        for (let i = 0; i <= 5; i++) {
+
+            arr[i] = prompt("Enter array Elements :");
+
+        }
+
+        let bag = "";
+
+        for (let i = 0; i <= arr.length - 1; i++) {
+            bag = bag + arr[i] + " ";
+        }
+
+        document.getElementById("head").innerHTML = bag;
+
+        let str = "";
+        arr.forEach(element => {
+            str = str+"<li>" + element + "</li>";
+        });
+        document.getElementById("ulist").innerHTML = str;
+
+    }
+
+
+</script>

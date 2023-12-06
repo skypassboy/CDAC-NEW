@@ -1,0 +1,20 @@
+1.What is object oriented Programming?
+2.What is Object and characteristics of object?
+3.How object oriented programming is better than Procedural programming?
+4.Explain main pillars of object oriented programming with real life exmaples.
+5.What is constructor? explain types of constructor.
+6.What is destructor?why there should not be multiple destructors?
+7.Explain copy constructor and use of copy constructor in cString class.
+8.What is dangling pointer in cpp?how to avoid dangline pointer?
+9.What is function overloading in CPP?
+10.Explain difference between pass by value,pass by reference and pass by address.
+11.Explain mode of inheritance with example.
+12.How to achive polymorphism in CPP?
+13.what is virtual function and pure virtual function?
+14.What is exception and how to implement handle exception in cpp?
+15.What is abstract class?explain use and working of absract class.
+16.What is template class and template function?
+17.Explain  all casting operators in cpp.
+18.What is abstract class?
+
+ 

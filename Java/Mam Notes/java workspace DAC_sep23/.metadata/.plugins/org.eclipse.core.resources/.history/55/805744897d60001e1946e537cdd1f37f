@@ -1,0 +1,11 @@
+package threadsync;
+
+public class DivisorThread implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

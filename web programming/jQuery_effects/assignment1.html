@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    
+    <button>Hide</button>
+    <button>show</button>
+    <button>toggle</button>
+    <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+</body>
+</html>
+<script>
+
+   var img = $("img").attr("src","https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=");
+
+    $("body>button").click(function(){
+        $("body>img").hide(3000);   
+    })
+
+    $("body>button+button").click(function(){
+        $("body>img").show(3000);  
+    })
+
+    $("body>button+button+button").click(function(){
+        $("body>img").toggle();  
+    })
+
+</script>

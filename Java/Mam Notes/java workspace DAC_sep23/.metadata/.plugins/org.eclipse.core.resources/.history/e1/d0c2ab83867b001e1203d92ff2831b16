@@ -1,0 +1,24 @@
+package demos;
+import java.util.*;
+public class SetDemo {
+
+	public static void main(String[] args) {
+		Set<String> names = new HashSet<>();
+		names.add("bakul");
+		//duplicate element will be rejected
+		names.add("bakul");
+		names.add("amit");
+		names.add("rahul");
+		names.add("vishal");
+		names.add("neelam");
+		names.add("vijay");
+		names.add("aniket");
+		System.out.println(names.size());
+		
+		System.out.println("iterating set : ");
+		for(String s : names)
+			System.out.println(s);
+
+	}
+
+}

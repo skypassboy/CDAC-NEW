@@ -1,0 +1,20 @@
+package myclasses;
+
+public class AnonymousDemo {
+
+	public static void main(String[] args) {
+		Runnable r = new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("in run method");
+			}			
+		};  //end of statement
+		
+		Thread t = new Thread(r);
+		t.start();  //r.run()
+		
+		
+
+	}
+
+}

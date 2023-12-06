@@ -1,0 +1,5 @@
+--open third cmd
+
+--Import following movie.json using the command given below
+
+>mongoimport --db test --collection movie --file "path\movie.json"

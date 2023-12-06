@@ -1,0 +1,12 @@
+package office.staff;
+
+public class A {
+
+	public static void main(String[] args) {
+		Emp e= new SalesManager();
+		System.out.println(e.salary);
+		
+
+	}
+
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stop Watch</title>
+</head>
+
+<body>
+
+    <h1 id="clock"></h1>
+    <button id="btn" onclick="startStop()">Start Stop</button>
+    <button id="reset" onclick="reset()">reset</button>
+</body>
+
+</html>
+<script>
+
+
+    cnt = 0;
+
+    function startStop() {
+
+        if (cnt == 0) {
+            start();
+            cnt++;
+        }
+        else {
+
+            if (cnt == 1) {
+                stop();
+                cnt--;
+            }
+
+        }
+
+    }
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+
+
+    function reset() {
+        clearInterval(f)
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        document.getElementById("clock").innerHTML = "0" + " : " + "00" + " : " + "00";
+    }
+
+
+    function start() {
+
+        f = setInterval(() => {
+            if (seconds == 60) {
+                seconds = 0;
+                if (minutes == 60) {
+                    minutes = 0;
+                    hours++;
+                }
+                minutes++;
+            }
+
+            if (seconds < 10 && minutes < 10) {
+                document.getElementById("clock").innerHTML = hours + " : " + "0" + minutes + " : " + "0" + seconds;
+            }
+            else if (seconds < 10 && minutes < 10) {
+                document.getElementById("clock").innerHTML = hours + " : " + "0" + minutes + " : " + "0" + seconds;
+            }
+            else if (seconds > 9 && minutes < 10) {
+                document.getElementById("clock").innerHTML = hours + " : " + "0" + minutes + " : " + seconds;
+            }
+            else if (seconds < 10 && minutes > 10) {
+                document.getElementById("clock").innerHTML = hours + " : " + minutes + " : " + "0" + seconds;
+            }
+            else {
+                document.getElementById("clock").innerHTML = hours + " : " + minutes + " : " + seconds;
+            }
+
+            seconds++;
+        }, 1000)
+
+    }
+
+    function stop() {
+
+
+        clearInterval(f)
+
+
+    }
+
+
+</script>

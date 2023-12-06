@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="display">Click Count :</h1>
+    <button id="btn" onclick="btn()">Click Me</button>
+</body>
+
+</html>
+<script>
+    var no =parse.localStorage(clickcount);
+    document.getElementById("display").innerHTML=
+    document.getElementById("display").localStorage
+
+    function btn() {
+        console.log(localStorage.clickcount);
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+        document.getElementById("display").innerHTML = `Click Count : ${localStorage.clickcount}`;
+
+
+    }
+
+</script>

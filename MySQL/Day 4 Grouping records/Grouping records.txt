@@ -1,0 +1,25 @@
+1.select avg(sal) from emp;
+2.select avg(sal), deptno from emp group by deptno having deptno=10;
+3.select max(sal),deptno from emp group by deptno;
+4.select count(*),deptno from emp group by deptno;
+5.select count(*) from emp where job='manager';
+6.select count(*),job from emp group by job having job='manager' or job='analyst' or job='clerk';
+                                     or
+
+select count(job),job from emp group by job having job='manager' or job='analyst' or job='clerk';
+
+7.select count(*),deptno from emp group by deptno having count(*)>3;
+8.select count(*),job from emp group by job having count(*)>3;
+9.select sum(sal),deptno from emp group by deptno;
+10.select max(sal),min(sal),avg(sal), deptno from emp group by deptno order by deptno;
+11.select sum(sal),deptno from emp group by deptno having sum(sal)>1500 order by deptno;
+12.select count(*),deptno from emp where job='clerk' group by deptno;
+13.select count(*),mgr from emp group by mgr;
+14.select deptno,avg(sal) from emp group by deptno having avg(sal)>2000;
+15.select count(*),deptno from emp group by deptno; 
+16.select count(*) 'count(job)',mgr 'more than 2' from emp where job = 'analyst' or job = 'salesman' group by mgr having count(*)>2; 
+17.select comm,count(*) from emp where  comm is not null;
+18. select max(sal) - min(sal) from emp where deptno=20;
+19.select * from emp where deptno=20 or deptno=30 and isnull(comm);
+20. select sum(sal), job from emp where deptno!=30 group by job having sum(sal)>5000;
+21.SELECT MAX(sal), job FROM emp WHERE (job = 'manager' OR job = 'clerk' OR job = 'salesman') AND (deptno = 10 OR deptno = 20);

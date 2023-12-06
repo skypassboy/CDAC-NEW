@@ -1,0 +1,20 @@
+package tests;
+
+public class WrapperTest {
+
+	public static void main(String[] args) {
+		//Integer n = new Integer(10);
+		Integer n = 10;   //auto-boxing
+		int intV = n;    //auto-unboxing
+		
+		System.out.println(args.length);
+		
+		int total = 0;
+		for(String s : args)
+		{
+			total += Integer.parseInt(s);
+		}
+		System.out.println(total);
+	}
+
+}

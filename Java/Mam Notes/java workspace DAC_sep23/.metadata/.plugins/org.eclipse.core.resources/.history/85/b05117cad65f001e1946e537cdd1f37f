@@ -1,0 +1,8 @@
+package utils;
+
+public interface Drawable {
+	double PI = 3.142;
+	
+	public void drawShape();
+
+}

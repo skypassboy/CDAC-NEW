@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment 2</title>
+</head>
+
+<body>
+    <input type="number" name="number" id="number">
+    <button onclick="checkInArray()" id="btn">Check In Array</button>
+    <h1 id="head"></h1>
+</body>
+
+</html>
+<script>
+
+    function checkInArray() {
+
+        let arr = [1, 2, 5, 8, 9, 36, 0, 45];
+
+        let no = document.getElementById("number").value;
+
+        arr.forEach((element) => {
+            console.log(element);
+            if (element==no) {
+                console.log(1);
+                
+                document.getElementById("head").innerHTML = `No is found at index ${index}`;
+            }
+            else{
+                document.getElementById("head").innerHTML = `No not found`;
+            }
+
+        });
+    }
+
+</script>

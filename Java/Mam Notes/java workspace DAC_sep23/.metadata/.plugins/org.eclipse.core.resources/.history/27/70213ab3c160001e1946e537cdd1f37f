@@ -1,0 +1,22 @@
+package reflection;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class CreateInstanceDynamically {
+
+	public static void main(String[] args) {
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter class name : ");
+		//java.lang.String
+		String clname = br.readLine();
+		
+		
+		
+		
+		
+
+	}
+
+}

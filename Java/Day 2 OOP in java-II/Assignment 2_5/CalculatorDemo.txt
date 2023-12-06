@@ -1,0 +1,15 @@
+public class CalculatorDemo{
+	
+
+	public static void main(String args[]){
+	
+		Calculator c1 = Calculator(12,20);
+		c1.Add();
+		c1.Substract();
+		c1.multiplication();
+		c1.Division();
+		
+	}
+
+
+}

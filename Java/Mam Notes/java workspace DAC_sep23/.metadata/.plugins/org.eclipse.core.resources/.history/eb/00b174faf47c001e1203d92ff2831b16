@@ -1,0 +1,35 @@
+package demos;
+
+import java.util.Comparator;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class StringLengthSorting {
+
+	public static void main(String[] args) {
+		Set<String> words = new TreeSet<>(new StringComparator());
+		words.add("welcome");
+		words.add("hi");
+		words.add("object");
+		words.add("html");
+		words.add("json");
+		words.add("jquery");
+		words.add("welcome");
+		words.add("bootstrap");
+
+	}
+
+}
+
+class StringComparator implements Comparator<String>
+{
+
+	@Override
+	public int compare(String o1, String o2) {
+		int diff = o1.length() - o2.length();
+		if(diff == 0)
+			diff = o1.compareTo(o2);
+		return diff;
+	}
+	
+}

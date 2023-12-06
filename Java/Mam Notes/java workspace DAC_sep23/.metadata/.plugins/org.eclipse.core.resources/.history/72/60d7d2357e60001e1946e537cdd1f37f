@@ -1,0 +1,30 @@
+package threadsync;
+
+import java.io.FileWriter;
+
+//1
+public class DivisorThread implements Runnable  {
+
+	private Thread t; //2
+	private int number;
+	private FileWriter fw;	
+	
+	public DivisorThread(int number, FileWriter fw) {
+		super();
+		this.number = number;
+		this.fw = fw;
+		this.t = new Thread(this); //3
+	}
+
+
+
+
+
+
+
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

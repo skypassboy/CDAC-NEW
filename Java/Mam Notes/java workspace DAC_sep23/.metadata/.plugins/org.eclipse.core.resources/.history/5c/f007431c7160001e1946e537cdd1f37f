@@ -1,0 +1,11 @@
+package threaddemos;
+
+public class MytaskDemo {
+
+	public static void main(String[] args) {
+		Runnable r = new Mytask();
+		
+
+	}
+
+}

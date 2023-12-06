@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Assignment 1</title>
+</head>
+
+<body>
+
+    <form>
+
+        <input type="text" name="string" id="str" placeholder="Enter string">
+        <input type="button" id="submitbtn" value="Click Me" onclick="submitForm()">
+
+    </form>
+    <h1 id="display"></h1>
+    <h1 id="uppercase"></h1>
+    <h1 id="lowercase"></h1>
+
+</body>
+
+</html>
+<script>
+
+    
+    function submitForm() {
+        var str = document.getElementById("str").value;
+        console.log(1);
+        console.log(str);
+        document.getElementById("display").innerHTML = `Length of String is : ${str.length}`;
+        document.getElementById("lowercase").innerHTML=str.lowerCase;
+        document.getElementById("uppercase").innerHTML=str.upperCase;
+    }
+    
+
+</script>

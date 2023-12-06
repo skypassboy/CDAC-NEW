@@ -1,0 +1,78 @@
+1.select ename,job from emp where sal>2000;
+2.select ename,deptno,empno from emp where job = 'manager' and empno=7698;
+3.select DISTINCT job from emp;
+4.select DISTINCT deptno from emp;
+5.select deptno from emp where job='salesman' or job='clerk';
+6.select ename,deptno from emp order by deptno;
+7.select ename, sal from emp order by sal desc;
+8.select * from emp order by sal desc limit 1;
+9.select * from emp order by sal desc limit 2,3;
+10.select * from emp order by sal desc limit 5;
+11.select ename,job from emp where deptno=20 order by sal  limit 1;
+
+
+like queries
+
+1.select * from emp where ename like '%r';
+2.select * from emp where ename like 'm%' and ename like '%r';
+3.select * from emp where ename like 'm%' or ename like '%a';
+4.select * from emp where ename like '__l%';
+5.select * from emp where ename like 'm%' and ename like '__l%' and ename like '%r';
+6.select * from emp where ename like 'm%' and ename like '%e_';
+7.
+8.select * from emp where ename like 'm%' or ename like 'a%' and ename like '%r' or ename like '%e';
+9.select * from emp where job like '__l%m__';
+10.select * from emp where job like '__c%' or job like '__e%' and job like '%k';
+11.select * from emp where isnull(comm) and ename like 's%';
+12.select * from emp where ename like 'a%e'  or ename like 's%h';
+13.select * from emp where ename like '%as';
+14.select * from emp where job like 'c%k';
+15.select * from emp where job like '__l%' and job like '%m__';
+16.select * from emp where job like 'c%' or job like 'e%' and job like '%k';
+17.select * from emp where isnull(comm) and ename like 's%';
+18.select * from emp where job like '_____';
+19.select * from emp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select ename,job from emp where job like 'c%' and job like '%k';

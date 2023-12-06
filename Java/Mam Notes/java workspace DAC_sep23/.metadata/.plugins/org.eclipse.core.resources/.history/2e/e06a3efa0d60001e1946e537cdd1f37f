@@ -1,0 +1,20 @@
+package exceptiondemos;
+
+import java.io.IOException;
+
+public class ThrowDemo {
+
+	public static void main(String[] args) {
+		//throwing exception object
+		//throw new NullPointerException();
+		try
+		{
+			throw new IOException();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

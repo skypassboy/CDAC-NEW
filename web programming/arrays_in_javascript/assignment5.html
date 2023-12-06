@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+
+<body>
+    <button id="sumbtn" onclick="sum(arr)">Sum</button>
+    <button id="avgbtn" onclick="avg(arr)">Average</button>
+    <button id="maxibtn" onclick="max(arr)">Maximum</button>
+    <button id="minibtn" onclick="min(arr)">Minimum</button>
+    <h1 id="array"></h1>
+    <h1 id="sum"></h1>
+    <h1 id="average"></h1>
+    <h1 id="maximum"></h1>
+    <h1 id="minimum"></h1>
+
+</body>
+
+</html>
+<script>
+    var arr = [98, 45, 67, 24, 1, 4, 5, 2];
+
+    var bag = "";
+
+    arr.forEach(element => {
+        bag = bag + element + " ";
+    });
+
+    document.getElementById("array").innerHTML = bag;
+
+    function sum(arr) {
+
+        var arrsum = arr.reduce(function (a, v) {
+            return a + v;
+        })
+
+        document.getElementById("sum").innerHTML = `Sum is : ${arrsum}`
+    }
+
+    function avg(arr) {
+
+        var arravg = arr.reduce(function (a, v) {
+            return a + v
+        })
+        var str = `Average is : ${arravg / arr.length}`;
+        document.getElementById("average").innerHTML = str;
+    }
+
+    function max(arr) {
+
+        var arrmax = arr.reduce(function (a, v) {
+            return a > v ? a : v;
+        })
+        var str = `max is : ${arrmax}`;
+        document.getElementById("maximum").innerHTML = str;
+    }
+
+
+    function min(arr) {
+
+        var arrmin = arr.reduce(function (a, v) {
+            return a < v ? a : v;
+        })
+        var str = `min is : ${arrmin}`;
+        document.getElementById("minimum").innerHTML = str;
+    }
+
+</script>

@@ -1,0 +1,5 @@
+package office.staff;
+
+public class Programmer extends Emp {
+
+}

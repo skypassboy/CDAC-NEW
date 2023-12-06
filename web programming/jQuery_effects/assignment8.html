@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment 8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #display{
+            border: 1px solid black;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        #display2{
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            width: 300px;
+        }
+        #displayImg{
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display">
+
+    </div>
+    <div id="display2">
+        <div>
+            <img class="image" id="img1"
+                src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8="
+                alt="">
+        </div>
+        <div>
+            <img class="image" id="img1"
+                src="https://c4.wallpaperflare.com/wallpaper/129/404/922/beautiful-night-night-sky-night-moon-wallpaper-preview.jpg"
+                alt="">
+        </div>
+        <div>
+            <img class="image" id="img1"
+                src="https://images3.alphacoders.com/589/589870.jpg"
+                alt="">
+        </div>
+        <div>
+            <img class="image" id="img1"
+                src="https://m.media-amazon.com/images/I/71RGoav5XdL.jpg"
+                alt="">
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function(){
+        $("img").click(function(){
+           var getimg = $(this).attr("src");
+           console.log(getimg)
+           var setimg=$("<img>").attr("src",getimg);
+           setimg.attr("id","displayImg");
+           $("#display").children().remove();
+           $("#display").append(setimg); 
+        })
+    })
+</script>

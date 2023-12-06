@@ -1,0 +1,15 @@
+public class TwoDArray{
+
+	public void colSum(int [][]arr){
+			
+		int [] colmArray;
+		colmArray
+	}
+	
+	public void rowSum(int [][]arr){
+	
+		
+	
+	}
+
+}

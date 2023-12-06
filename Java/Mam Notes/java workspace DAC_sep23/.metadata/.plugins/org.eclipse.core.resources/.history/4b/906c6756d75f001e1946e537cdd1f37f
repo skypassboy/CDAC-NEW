@@ -1,0 +1,19 @@
+package shapes;
+
+import utils.Drawable;
+
+public class Circle implements Drawable {
+
+	@Override
+	public void drawShape() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public double calArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

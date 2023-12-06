@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Assignment 1</title>
+</head>
+
+<body>
+
+    <form>
+
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+                <td>Enter Number</td>
+                <td>
+                    <input type="number" name="number" id="num" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" name="button" id="btn" value="Factorial" onclick="fact()">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+    <h1 id="display"></h1>
+    <table id="tbl" border="1" style="border-collapse: collapse ;"></table>
+</body>
+
+</html>
+<script>
+    let bag = "";
+    // bag=bag+"<table border='1'>";
+    console.log(2);
+    function fact() {
+
+        // console.log(1);
+        let no = document.getElementById("num").value;
+
+        let res = 1;
+
+        for (let i = 1; i <= no; i++) {
+            res = res * i;
+        }
+
+        // document.getElementById("display").innerHTML = `factorial of ${no} is ${res}`;
+
+        bag = bag + "<tr>";
+            bag+="<><>"
+        bag = bag + "<td>";
+        bag = bag + `factorial of ${no} is ${res}`;
+        bag = bag + "</td>";
+        bag = bag + "</tr>"
+        console.log(bag);
+        document.getElementById("tbl").innerHTML = bag;
+        
+    }
+
+    // bag=bag+"</table>";
+
+
+</script>

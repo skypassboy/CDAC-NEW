@@ -1,0 +1,24 @@
+package demos;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDemo {
+
+	public static void main(String[] args) 
+	{
+		Map<Integer, String> courses = new HashMap<>();
+		courses.put(20, "PG-DAC");
+		courses.put(25, "PG-DBDA");
+		courses.put(30, "PG-DAI");
+		courses.put(35, "PG-DMC");
+		courses.put(40, "PG-DITISS");
+		courses.put(45, "PG-Infra");
+		
+		System.out.println(courses);
+		
+		
+
+	}
+
+}

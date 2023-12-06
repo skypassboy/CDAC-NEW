@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Validate Form</title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <form name="fname" method="get" id="f1">
+        <label for="username">username :</label>
+        <input type="text" name="username" id="username" /> <span id="unspan"></span><br />
+
+        <label for="password">password :</label>
+        <input type="password" name="password" id="password" /><span id="pdspan"></span> <br />
+
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email"> <span id="mailspan"></span> <br>
+
+        <label for="occupation">occupation :</label>
+        <select name="occupation" id="occupation" required>
+            <option value="select">select occupation</option>
+            <option value="Farmer">Farmer</option>
+            <option value="Business">Business</option>
+        </select><br>
+
+
+
+        <label for="">Gender :</label>
+        <input type="radio" name="radio" id="myradio1" required><span>M</span>
+        <input type="radio" name="radio" id="myradio2" required><span>F</span> <br>
+        <input type="button" name="mysubmit" id="mysubmit" value="submit" onclick="validateForm()" />
+    </form>
+</body>
+
+</html>
+<script>
+
+    function validateForm() {
+
+        // validate username
+        var upattern = /^[A-Za-z0-9._-]{5,15}$/
+        var uname = document.getElementById("username").value;
+
+        if (upattern.test(uname)) {
+            document.getElementById("unspan").innerHTML = "";
+            document.getElementById("username").value = uname;
+        }
+        else {
+            document.getElementById("unspan").innerHTML = "Invalid Syntax";
+            document.getElementById("username").value = "";
+            document.getElementById("username").focus();
+            return;
+        }
+
+        //validate pwd
+        var pwd = document.getElementById("password").value;
+        var pwdpattern = /^(?=.*[0-9])(?=.*[A-Z])(?=.*[!@#$%^&])[A-Za-z0-9!@#$%^&*]{5,}$/;
+
+        if (pwdpattern.test(pwd)) {
+            document.getElementById("pdspan").innerHTML = "";
+            document.getElementById("password").value = pwd;
+        }
+        else {
+            document.getElementById("pdspan").innerHTML = "Invalid Syntax";
+            document.getElementById("password").value = "";
+            document.getElementById("password").focus();
+            return;
+        }
+
+
+        // validate email
+
+        var mail = document.getElementById("email").value;
+        var mailpattern = /.{3,8}@[\w]{2,5}\.com$/;
+
+        if (mailpattern.test(mail)) {
+            document.getElementById("mailspan").innerHTML = "";
+            document.getElementById("email").value = mail;
+        }
+        else {
+            document.getElementById("mailspan").innerHTML = "Invalid Syntax";
+            document.getElementById("email").value = "";
+            document.getElementById("email").focus();
+            return;
+        }
+
+        alert("now submitting...");
+        console.log("hi");
+        // document.fname.submit();
+        document.getElementById("f1").submit();
+        alert(document.fname.nodeName);
+    }
+
+
+</script>

@@ -1,0 +1,13 @@
+PS C:\Users\Ritesh\Desktop\CDAC\web programming\Introduction_to_node_js> node .\assignment3.js
+Hello world
+PS C:\Users\Ritesh\Desktop\CDAC\web programming\Introduction_to_node_js> node
+Welcome to Node.js v18.18.2.
+Type ".help" for more information.
+> var a=10;
+undefined
+> var b=20;
+undefined
+> console.log(a+b)
+30
+undefined
+>

@@ -1,0 +1,25 @@
+select eno,name,sal,sal+2000
+from employee;
+
+select eno 'Employee No',name Name,sal as Salary ,sal+2000 "Total Salary"
+from employee;
+
+update employee
+set sal=10000;
+
+update employee
+set sal=20000
+where eno=2 or eno=3;
+
+set autocommit=0;
+by default autocommit is true in Mysql
+
+
+delete 
+from employee
+where eno=1
+
+alter table employee1 
+add job varchar(12);
+
+alter table is a DDL command and cannot be rolled backed.

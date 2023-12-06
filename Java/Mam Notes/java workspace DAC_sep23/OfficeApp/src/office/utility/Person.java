@@ -1,0 +1,53 @@
+package office.utility;
+
+import java.io.Serializable;
+
+public class Person implements Serializable 
+{
+	private String name;
+	private Date bdate;
+	
+	public Person() {
+		//super();
+		//name and bdate should not remain null
+		name="";
+		bdate=new Date();
+	}
+
+	public Person(String name, int dd,int mm,int yy) {
+		super();
+		this.name = name;
+		this.bdate = new Date(dd,mm,yy);
+	}
+
+	public Person(String name, Date bdate) {
+		super();
+		this.name = name;
+		this.bdate = bdate;
+	}
+	
+	public void display()
+	{
+		System.out.println("Name : "+name);
+		if(bdate!=null)
+		{
+			System.out.println("Birthdate : ");
+			bdate.showDate();
+		}
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Name : "+name+"\nBirthdate : "+bdate.toString();
+		//return "Name : "+name+"\nBirthdate : "+bdate;
+	}
+	
+	
+	
+	
+	
+	
+	
+
+}

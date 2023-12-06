@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+class Student {
+    private String rollNumber;
+    private String name;
+    private int numSubjects;
+    private double[] marks;
+
+    public Student(String rollNumber, String name, int numSubjects) {
+        this.rollNumber = rollNumber;
+        this.name = name;
+        this.numSubjects = numSubjects;
+        this.marks = new double[numSubjects];
+
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < numSubjects; i++) {
+            System.out.print("Enter marks for subject " + (i + 1) + " for student " + name + ": ");
+            marks[i] = scanner.nextDouble();
+        }
+    }
+
+    public void displayDetails() {
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Name: " + name);
+        System.out.println("Number of Subjects: " + numSubjects);
+        System.out.println("Marks:");
+        for (int i = 0; i < numSubjects; i++) {
+            System.out.println("Subject " + (i + 1) + ": " + marks[i]);
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of students: ");
+        int n = scanner.nextInt();
+        scanner.nextLine();  // Consume the newline character
+
+        Student[] students = new Student[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter Roll Number for Student " + (i + 1) + ": ");
+            String rollNumber = scanner.nextLine();
+            System.out.print("Enter Name for Student " + (i + 1) + ": ");
+            String name = scanner.nextLine();
+            System.out.print("Enter Number of Subjects for Student " + (i + 1) + ": ");
+            int numSubjects = scanner.nextInt();
+            scanner.nextLine();  // Consume the newline character
+
+            students[i] = new Student(rollNumber, name, numSubjects);
+        }
+
+        System.out.println("\nStudent Details:");
+        for (Student student : students) {
+            student.displayDetails();
+        }
+    }
+}

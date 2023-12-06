@@ -1,0 +1,18 @@
+package apps;
+
+import office.staff.Emp;
+import office.utility.Person;
+
+public class EmpDemo {
+
+	public static void main(String[] args) {
+		Emp e = new Emp();
+		e.display();  //dynamically
+		
+		Person p = new Emp();
+		p.display();
+		
+
+	}
+
+}

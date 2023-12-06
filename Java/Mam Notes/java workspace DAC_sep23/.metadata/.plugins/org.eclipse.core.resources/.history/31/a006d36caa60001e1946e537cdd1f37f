@@ -1,0 +1,17 @@
+package threadcomm;
+
+public class Stock {
+	int qtyProduced;
+	int qtyConsumed;
+	boolean bProduced;  //true-consumer, false-producer 
+	
+	public Stock()
+	{
+		qtyProduced = qtyConsumed = 0;
+		bProduced = false;
+	}
+	
+	
+	
+
+}

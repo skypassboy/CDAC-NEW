@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to web programimg</title>
+    <style>
+        #welcome {
+            text-align: center;
+            color: green;
+        }
+
+        #bd {
+            background-color: pink;
+        }
+
+        #anchor {
+          
+           text-align: center;
+           justify-content: space-around;
+
+        }
+        #div1{
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+
+        }
+    </style>
+</head>
+
+<body id="bd">
+    <h1 id="welcome">Welcome to web programimg</h1>
+    <h2 id="welcome">Welcome to web programimg</h2>
+    <h3 id="welcome">Welcome to web programimg</h3>
+    <h4 id="welcome">Welcome to web programimg</h4>
+    <h5 id="welcome">Welcome to web programimg</h5>
+    <marquee id="welcome">Welcome</marquee> <br>
+
+
+    <div id="div1">
+    <a href="#concepts" id="anchor">Oop Concepts</a>
+    <a href="#interface" id="anchor">Use of interface</a>
+    <a href="#instanceof" id="anchor">Use of instanceof operator</a>
+    </div>
+
+
+    <p id="concepts">
+
+        <!-- oop concepts -->
+    <h1>
+        OOP CONCEPTS
+    </h1>
+
+    <br>
+
+    <b>Classes and Objects:</b> <br>
+
+    Class: A blueprint or template for creating objects. It defines a data type and the methods that can operate on
+    that data.
+    Object: An instance of a class. It is a concrete realization of the class, with actual values in place of
+    parameters. <br>
+    <b>Encapsulation:</b> <br>
+
+    Encapsulation is the bundling of data (attributes) and the methods that operate on the data into a single unit
+    (class). It restricts direct access to some of the object's components, and only allows the interaction through
+    an object's methods. <br>
+    <b>Inheritance:</b> <br>
+
+    Inheritance is a mechanism where a new class inherits properties and behaviors from an existing class. The
+    existing class is called the parent or base class, and the new class is called the child or derived class. This
+    promotes code reusability and establishes a relationship between the classes. <br>
+    <b>Polymorphism:</b> <br>
+
+    Polymorphism means "many forms." It allows objects of different types to be treated as objects of a common type.
+    There are two types of polymorphism: compile-time (method overloading) and runtime (method overriding).
+    Method Overloading: Same method name but different parameters or types within the same class.
+    Method Overriding: Same method signature in both the parent and child class, allowing the child class to provide
+    a specific implementation. <br>
+    <b>Abstraction:</b> <br>
+
+    Abstraction is the process of simplifying complex systems by modeling classes based on the essential properties
+    and behaviors they share. It hides the complex reality while exposing only the necessary parts. <br>
+    <b>Association:</b> <br>
+
+    Association represents a relationship between two or more objects where they are independent entities but are
+    related in some way. It can be a one-to-one, one-to-many, or many-to-many relationship.
+    <b>Composition:</b> <br>
+
+    Composition is a strong form of association where one class contains an object of another class. It represents a
+    "whole-part" relationship. <br>
+    <b>Aggregation:</b> <br>
+    <h5>
+        Aggregation is a weaker form of association where one class contains another class, but the contained class can
+        exist independently. It represents a "has-a" relationship.
+        These OOP concepts provide a way to structure and organize code in a modular and reusable manner, making it
+        easier to understand, maintain, and scale software systems.
+    </h5>
+    </p>
+
+
+
+    <!-- use of interface -->
+
+    <p id="interface">
+
+    <h1>USE OF INTERFACE</h1> <br>
+    In Java, an interface is a blueprint for classes that defines a set of methods that the implementing classes
+    must provide. It consists of method signatures without any implementation. <br>
+
+    <b>Implementing an Interface:</b> <br>
+    Classes implement interfaces by providing concrete implementations for all the methods declared in the
+    interface. This ensures that the implementing class adheres to the contract defined by the interface. <br>
+
+    <b>Multiple Interface Inheritance:</b>
+    Java supports multiple interface inheritance, allowing a class to implement multiple interfaces. This provides a
+    way to achieve a form of multiple inheritance in Java. <br>
+
+    <b> Constants in Interfaces:</b> <br>
+    Interfaces can contain constant fields (public, static, final), serving as constants that implementing classes
+    can use. <br>
+
+    <b>Default and Static Methods (Java 8 and later):</b> <br>
+    Starting from Java 8, interfaces can have default and static methods with implementations. Default methods allow
+    the addition of new methods to interfaces without breaking existing implementations. <br>
+
+    <b>Functional Interfaces and Lambdas (Java 8 and later):</b> <br>
+    Functional interfaces, which have a single abstract method, can be used with lambda expressions for concise
+    implementation. This supports the functional programming paradigm in Java. <br>
+
+    In summary, interfaces in Java provide a way to enforce a contract on classes, support multiple inheritance, and
+    allow the addition of new methods without breaking existing code. They are a key feature for achieving
+    abstraction and modularity in Java programming.
+
+    </p>
+
+
+    <!-- instance of -->
+
+    <p id="instanceof">
+    <h1>The instanceof Operator in Java</h1> <br>
+
+    In Java, the instanceof operator is employed for runtime type checking. It enables the determination of whether
+    an object is an instance of a specific class or interface, allowing conditional logic based on the actual type
+    of an object during program execution.
+    </p>
+
+</body>
+
+</html>

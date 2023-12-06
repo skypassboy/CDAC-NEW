@@ -1,0 +1,36 @@
+package tests;
+
+public class WrapperTest {
+
+	public static void main(String[] args) {
+		//Integer n = new Integer(10);
+		//Integer n = 10;   //auto-boxing
+		int intV = n;    //auto-unboxing
+		
+		System.out.println(args.length);
+		
+		/*int total = 0;
+		for(String s : args)
+		{
+			total += Integer.parseInt(s);
+		}
+		System.out.println(total); */
+		int n = Integer.parseInt(args[0]);
+		System.out.println(checkPrime(n));
+		
+		int base = Integer.parseInt(args[0]);
+		int pow = Integer.parseInt(args[1]);
+		System.out.println(baseToPower(base,pow));
+	}
+	
+	static boolean checkPrime(int no)
+	{
+		return true;
+	}
+	
+	static long baseToPower(int base,int p)
+	{
+		return 1L;
+	}
+
+}

@@ -1,0 +1,35 @@
+package datecalendar;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class DateCalendarDemo {
+
+	public static void main(String[] args) {
+		//def cons
+		Date cdate = new Date();
+		System.out.println(cdate);
+		
+		//no of miliseconds
+		Date d1 = new Date(24*60*60*1000);
+		System.out.println(d1);
+
+		//java.sql.Date
+		//maintains date part
+		java.sql.Date d2 = new java.sql.Date(8786887444l);
+		System.out.println(d2);
+		System.out.println("*****************");
+		//abstract class
+		//maintains date and time as set of calendar fields
+		Calendar cl = Calendar.getInstance();
+		System.out.println(cl.getTime());
+		
+		System.out.println(cl.get(Calendar.YEAR));
+		System.out.println(cl.get(Calendar.DAY_OF_WEEK));
+		
+		
+		
+		
+	}
+
+}

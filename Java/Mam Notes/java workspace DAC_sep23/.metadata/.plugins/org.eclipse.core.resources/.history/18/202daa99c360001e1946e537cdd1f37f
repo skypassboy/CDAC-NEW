@@ -1,0 +1,14 @@
+package datecalendar;
+
+import java.util.Date;
+
+public class DateCalendarDemo {
+
+	public static void main(String[] args) {
+		//def cons
+		Date cdate = new Date();
+		System.out.println(cdate);
+
+	}
+
+}

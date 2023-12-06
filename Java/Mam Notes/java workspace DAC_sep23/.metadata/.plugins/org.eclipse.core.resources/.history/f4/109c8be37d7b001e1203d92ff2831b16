@@ -1,0 +1,99 @@
+package demos;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.function.Consumer;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		/*List objects = new ArrayList();
+		//objects.add
+		objects.add("welcome");
+		objects.add(new Integer(10));
+		objects.add(Calendar.getInstance().getTime());
+		
+		for(Object o : objects)
+			System.out.println(((String)o).toUpperCase());
+		*/
+		//List<String> words = new ArrayList<>();
+		List<String> words = new LinkedList<>();
+		words.add("welcome");
+		words.add("hi");
+		words.add("object");
+		words.add("html");
+		words.add("jquery");
+		words.add("welcome");
+		words.add("bootstrap");
+		//words.add(null);
+		//words.add(null);
+				
+		System.out.println("No of elements : "+words.size());
+		
+		System.out.println(words); //toString()
+		
+		words.add(3,"javascript");
+		
+		System.out.println(words); //toString()
+		
+		words.remove(1);
+		
+		System.out.println(words); //toString()
+		
+		words.remove("welcome");
+		
+		System.out.println(words); //toString()
+		
+		words.set(0, "json");
+		
+		System.out.println(words); //toString()
+		
+		System.out.println(words.get(4));
+		
+		//iterate - advanced for loop
+		System.out.println("Advanced for loop");
+		for(String  e : words)
+			System.out.println(e.length());
+		
+		System.out.println("Using iterator");
+		Iterator<String> i = words.iterator();
+		while(i.hasNext())
+			System.out.println(i.next().toUpperCase());
+		
+		System.out.println("Using listiterator");
+		ListIterator<String> li = words.listIterator();
+		while(li.hasNext())
+			li.next();
+		while(li.hasPrevious())
+			System.out.println(li.previous());
+			
+		System.out.println("Using foerach method");
+		/*words.forEach(new Consumer<String>() {
+
+			@Override
+			public void accept(String t) {
+				System.out.println(t+" : "+t.length());
+				
+			}
+			
+		} ); */
+		words.forEach((String e)->System.out.println(e + " : "+ e.length()));
+		
+		//common algorithms
+		Collections.sort(words);
+		
+		System.out.println("After sorting");
+		for(String e : words)
+			System.out.println(e);
+		
+		
+		
+		
+	}
+
+}

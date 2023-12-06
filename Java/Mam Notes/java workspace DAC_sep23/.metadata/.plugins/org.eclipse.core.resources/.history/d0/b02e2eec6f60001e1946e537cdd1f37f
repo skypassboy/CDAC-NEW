@@ -1,0 +1,5 @@
+package customthreads;
+
+public class Mythread extends Thread {
+
+}

@@ -1,0 +1,16 @@
+package demos;
+import java.util.*;
+public class SetDemo {
+
+	public static void main(String[] args) {
+		Set<String> names = new HashSet<>();
+		names.add("bakul");
+		names.add("bakul");
+		names.add("bakul");
+		names.add("bakul");
+		names.add("bakul");
+		names.add("bakul");
+
+	}
+
+}

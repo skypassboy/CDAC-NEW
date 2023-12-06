@@ -1,0 +1,89 @@
+create table vehicle(
+Vid int,
+Vname varchar(15),
+Price int,
+Discount int,
+Milage int,
+Details varchar(30)
+);
+
+insert into vehicle values(1,'Activa',80000,10,35,'Two wheelar sturdy milage 30km');
+insert into vehicle values(2,'Santro',95000,20,20,'Product of Hyundai');
+insert into vehicle values(3,'Yamaha',160000,5,70,'Sturdy and good milage');
+insert into vehicle values(4,'i-10',300000,8,18,'Good small car');
+insert into vehicle values(5,'WagenR',250000,10,25,'Good milage car');
+insert into vehicle values(6,'Hero Splender',75000,9,65,'Best Bike');
+insert into vehicle values(7,'Royal Enfield',190000,5,40,'A royal bike');
+
+Create table customer(
+Custid int,
+Cname varchar(15),
+Location varchar(15)
+);
+
+insert into Customer values(1,'Nilima','Pimpri');
+insert into Customer values(2,'Ganesh','Pune');
+insert into Customer values(3,'Kishor','Kothrud');
+insert into Customer values(4,'Priya','Aundh');
+
+Create table salesman(
+Sid int,
+Sname varchar(15),
+City varchar(15),
+Experience int
+);
+
+insert into Salesman values(10,'Rajesh','Mumbai',5);
+insert into Salesman values(11,'Seema','Pune',8);
+insert into Salesman values(12,'Shailesh','Nagpur',7);
+insert into Salesman values(13,'Rakhi','Pune',2);
+
+1. select vid 'Vehicle ID',vname 'Vehicle Name', price ,discount, details from vehicle;
+2.select sname 'Sales Person Name' from salesman where city='Pune';
+3. delete from customer where Location='Pimpri';
+4. select * from vehicle where Vname = 'Hero splender';
+5.update vehicle set Price = 100000 where price=95000;
+6.create table customer1 as select * from customer;
+6.create table salesman1 as select * from salesman;
+7.delete from customer;
+8.drop table salesman;
+9.select vid,vname,price,details,price-price*(discount*0.01) 'Total Price' from vehicle;
+10.select * from vehicle where price<100000;
+11.select * from salesman1 where experience >5;
+
+create table employee(
+eno int,
+ename varchar(15),
+basic int,
+incentives int
+);
+
+insert into employee values(1,'Rajesh',20000,1500);
+insert into employee values(2,'Sarita',25000,1000);
+insert into employee values(3,'Meera',15000,3000);
+insert into employee values(4,'Jitesh',30000,500);
+insert into employee values(5,'Ramesh',12000,3000);
+
+1.select * from employee where basic >15000;
+2.update employee set incentives = 1000 where ename=jitesh;
+3.select (basic+incentives)*1.05 'salary' from employee where basic <20000;
+4.insert into employee values(20,'Ajay',16000,null);
+5.delete from employee where ename='meera';
+6.alter table employee add job varchar(15);
+7.update employee set job = 'head cleark' where ename='Ramesh';
+8.update employee set job = 'analyst' where ename='sarita' or ename='jitesh';
+9.
+
+use emp table
+
+1. select * from emp where sal>=500 and sal<2000;
+2. select * from emp where sal=1250 or sal=3350 or sal=1350;
+3. select * from emp where sal>2000 and comm>200;
+4. select * from emp where job='cleak' and sal>2000;
+5. select * from emp where sal=1250 or sal=1100;
+6. select * from emp where sal>1250 and sal<2850;
+7. select * from emp where sal<>1250 and sal<2850;
+8. select * from emp where job='clerk' or job='salesman' and sal>1000;
+   select * from emp where (job='clerk' or job='salesman') and sal>1000;
+9. select * from emp where sal<>1250 and sal<>1100 and sal<>2850;
+10. select * from emp where isnull(comm);

@@ -1,0 +1,23 @@
+package apps;
+
+import office.staff.Emp;
+import office.utility.Person;
+
+public class EmpDemo {
+
+	public static void main(String[] args) {
+		Emp e = new Emp();
+		e.display();  //dynamically
+		
+		//substitution
+		//expecting person - replaced by emp
+		//super class reference - subclass instance
+		Person p = new Emp();
+		 
+		//Emp e1 = new Person();
+		p.display();    
+		
+
+	}
+
+}

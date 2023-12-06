@@ -1,0 +1,54 @@
+
++-------+--------+--------------+------+------------+---------+---------+--------+
+| empno | ENAME  | job          | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+--------+--------------+------+------------+---------+---------+--------+
+|  7369 | SMITH  | senior clerk | 7902 | 1980-12-17 |  920.00 |    NULL |     20 |
+|  7499 | ALLEN  | SALESMAN     | 7698 | 1981-02-20 | 2857.75 |  300.00 |     30 |
+|  7521 | WARD   | SALESMAN     | 7698 | 1981-02-22 | 2889.38 |  500.00 |     30 |
+|  7566 | JONES  | MANAGER      | 7839 | 1981-04-02 | 3421.25 |    NULL |     20 |
+|  7654 | MARTIN | SALESMAN     | 7698 | 1981-09-28 | 5114.63 | 1400.00 |     30 |
+|  7698 | BLAKE  | MANAGER      | 7839 | 1981-05-01 | 3277.50 |    NULL |     30 |
+|  7782 | CLARK  | MANAGER      | 7839 | 1981-09-06 | 2817.50 |    NULL |     10 |
+|  7788 | SCOTT  | ANALYST      | 7566 | 1982-12-09 | 3450.00 |    NULL |     20 |
+|  7839 | KING   | PRESIDENT    | NULL | 1981-11-17 | 5750.00 |    NULL |     10 |
+|  7844 | TURNER | SALESMAN     | 7698 | 1981-09-08 | 1983.75 |    0.00 |     30 |
+|  7876 | ADAMS  | CLERK        | 7788 | 1983-01-12 | 1265.00 |    NULL |     20 |
+|  7900 | JAMES  | CLERK        | 7698 | 1981-12-03 | 1092.50 |    NULL |     30 |
+|  7902 | FORD   | ANALYST      | 7566 | 1981-12-03 | 3450.00 |    NULL |     20 |
+|  7920 | chris  | clerk        | 7698 | 1980-12-17 | 3139.50 |  200.00 |     10 |
+|  7934 | MILLER | CLERK        | 7782 | 1982-01-23 | 1495.00 |    NULL |     10 |
++-------+--------+--------------+------+------------+---------+---------+--------+
+
+
+1.select ename,sal,deptno from emp where deptno=20;
+2.select * from emp where hiredate > '1981-06-09';
+3.select empno,ename,comm, sal+ifnull(comm,0) 'Total Salary' from emp;
+4.select empno,deptno,job from emp where ename='smith';
+5.select * from emp where sal>2000 and (job='clerk' or job='salesman');
+6.select * from emp where (deptno=20 or deptno=30) and hiredate>'1981-12-31' and hiredate<'1982-12-31';
+7.select ename,empno,sal*1.2 salarynew from emp;
+8.create table emptmp as select * from emp where 1=2;
+9.alter table emp100 modify empno int primary key;
+10.insert into emp100 values(7920,'chris','clerk',7698,'1980-12-17',2000.00,200,10);
+11.select * from emp100 where isnull(mgr);
+12.SELECT e.empno, e.ename,e.sal, d.dname FROM emp100 e INNER JOIN dept100 d ON e.deptno = d.deptno;
+13.UPDATE emp100 SET sal = (COALESCE(sal, 0) + COALESCE(comm, 0)) * 1.15;
+	or
+   UPDATE emp100 SET sal = (sal + IFNULL(comm, 0)) * 1.15;
+14.update emp100 modify job='senior clerk' where ename='smith';
+15.UPDATE emp100 SET sal = (sal + IFNULL(comm, 0)) * 1.15 where comm is not null;
+16.select * from emp100 where sal>2000 and comm>200;
+17.select ename 'Employee Name', job 'job' from emp100 where hiredate<'1982-01-01' and sal between 1200 and 2500;
+18.select empno,ename,deptno from emp100 where mgr=7698;
+
+
+
+
+
+
+
+
+
+
+
+

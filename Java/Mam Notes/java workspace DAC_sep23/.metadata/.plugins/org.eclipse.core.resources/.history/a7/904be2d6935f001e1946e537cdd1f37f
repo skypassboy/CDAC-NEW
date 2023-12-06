@@ -1,0 +1,7 @@
+package office.staff;
+
+import office.utility.Person;
+
+public class Emp extends Person {
+
+}

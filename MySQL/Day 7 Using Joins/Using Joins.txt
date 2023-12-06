@@ -1,0 +1,16 @@
+1.create table Product(pid int primary key, 
+pname varchar(20),
+qty int check(qty>0), 
+price float(6,2) default 20.00, 
+cid int,
+sid int,
+constraint fk_cid foreign key(cid) references category(cid) on delete set null, 
+constraint fk_sid foreign key(sid) references salesman(sid)
+);
+
+
+2.create table salesman(
+sid int primary key,
+sname varchar(15) unique not null, 
+city varchar(15)
+);

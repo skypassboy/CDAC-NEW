@@ -1,0 +1,36 @@
+package myclasses;
+
+abstract class X{
+	public abstract void display();
+}
+
+public class AnonymousDemo {
+
+	public static void main(String[] args) {
+		
+		//anonymous inner class - interface
+		Runnable r = new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("in run method");
+			}			
+		};  //end of statement
+		
+		Thread t = new Thread(r);
+		t.start();  //r.run()
+		
+		//anonymous innner class - abstract class
+		X obj = new X() {
+			@Override
+			public void display() {
+				System.out.println("in display method");
+				
+			}			
+		} ;
+		obj.display();
+		
+		
+
+	}
+
+}

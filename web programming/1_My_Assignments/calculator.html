@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #maindiv {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            width: 37%;
+            /* border: 1px solid black; */
+            height: 600px;
+            margin-top: 100px;
+
+        }
+
+        #display {
+            /* border: 1px solid red; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 20px;
+            width: 90%;
+            height: 100px;
+            margin: auto;
+            margin-top: 20px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            overflow: hidden;
+        }
+
+        #keyboard {
+            /* border: 1px solid green; */
+            width: 90%;
+            height: 75%;
+            margin: auto;
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 13px;
+        }
+
+        #keyboard>button {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 20px;
+            border: 0px;
+            font-size: 30px;
+        }
+
+        #keyboard>button:hover {
+            transform: scale(1.05);
+            transition: 0.2s;
+        }
+
+        #keyboard>button:nth-child(4) {
+            background-color: black;
+            color: white;
+        }
+
+        #keyboard>button:nth-child(8) {
+            background-color: black;
+            color: white;
+        }
+
+        #keyboard>button:nth-child(12) {
+            background-color: black;
+            color: white;
+        }
+
+        #keyboard>button:nth-child(16) {
+            background-color: black;
+            color: white;
+        }
+
+        #keyboard>button:nth-child(15) {
+            background-color: black;
+            color: white;
+        }
+
+        #keyboard>button:nth-child(13) {
+            background-color: orangered;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maindiv">
+
+        <div id="display"></div>
+        <div id="keyboard">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>-</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>*</button>
+            <button>C</button>
+            <button>0</button>
+            <button>=</button>
+            <button>/</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    var btnarr = document.querySelectorAll("#keyboard>button");
+
+    console.log(btnarr);
+
+    for (let i = 0; i < btnarr.length; i++) {
+        btnarr[i].addEventListener("click", btn);
+    }
+
+    var bag = "";
+    function btn(event) {
+
+        let values = event.target.innerText;
+        if (values == "C") {
+            bag = "";
+            document.getElementById("display").innerHTML = bag;
+        }
+        else if (values == "=") {
+
+            if (bag == "") {
+                document.getElementById("display").innerHTML = "";
+            }
+            else {
+                document.getElementById("display").innerHTML = eval(bag);
+            }
+        }
+        else {
+            bag = bag + values;
+            document.getElementById("display").innerHTML = bag;
+        }
+
+    }
+
+</script>

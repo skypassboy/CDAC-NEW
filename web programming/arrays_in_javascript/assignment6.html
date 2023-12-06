@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment 6</title>
+</head>
+
+<body>
+
+    <button id="btn" onclick="checkAllEven(arr)"> Check all even</button>
+    <h1 id="array"></h1>
+    <h1 id="head"></h1>
+
+
+</body>
+
+</html>
+<script>
+
+    var arr = [1, 5, 7, 8, 9, 14, 56, 72];
+
+    var bag = "";
+    arr.forEach(function (ele) {
+        bag = bag + ele + " ";
+    })
+
+    document.getElementById("array").innerHTML = bag;
+
+    function checkAllEven(arr) {
+
+        var res = arr.every(function (ele) {
+
+            return ele % 2;
+
+        })
+
+        if (res === true) {
+            console.log(1)
+            document.getElementById("head").innerHTML = `All are Even`;
+        }
+        else {
+            console.log(0);
+            document.getElementById("head").innerHTML = `All are not Even`;
+        }
+
+
+    }
+
+
+</script>

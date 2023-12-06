@@ -1,0 +1,38 @@
+package apps;
+
+import office.staff.Admin;
+import office.staff.Emp;
+import office.staff.Programmer;
+import office.staff.SalesManager;
+
+public class OfficeApp {
+
+	public static void main(String[] args) {
+		//Emp [] allemps = {new SalesManager()  ,new Programmer()   , new Admin()   } ;
+		Emp [] allemps = new Emp[3];
+		allemps[0] = new SalesManager("Amit", 11,11 ,1998 , 1001, 10000, 100000, 4.5);
+		allemps[1] = new Programmer("Bakul", 12, 12, 1997, 1002, 15000, 45.5, 879.0);
+		allemps[2] = new Admin("Rahul", 3, 4, 1999, 1005, 9000, 987);
+		
+		//for(int i=0;i<allemps.length;i++)
+		//advanced for loop
+		//for each loop
+		for( Emp e : allemps) {
+			System.out.println(e);
+			System.out.println("***********");
+		}
+			
+		for( Emp e : allemps) {
+			System.out.println("Salary : "+e.calSalary());
+			System.out.println("***********");
+		}
+		
+		/*int [] arr;	
+		for	( int n : arr)
+		*/	
+			
+		
+		
+	}
+
+}

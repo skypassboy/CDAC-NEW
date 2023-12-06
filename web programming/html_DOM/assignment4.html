@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+</head>
+
+<body id="displaybody">
+
+</body>
+
+</html>
+<script>
+
+
+    var btn = document.createElement("button");
+    console.log(btn)
+    btn.innerText = "Red"
+    btn.addEventListener("click", clickMe);
+
+    var btn1 = document.createElement("button");
+    console.log(btn)
+    btn1.innerText = "Green"
+    btn1.addEventListener("click", clickMe);
+
+    document.getElementById("displaybody").append(btn, btn1);
+
+
+    function clickMe() {
+        console.log(1);
+        var values = event.target.innerText;
+        if (values == "Red") {
+
+            document.getElementById("displaybody").style.backgroundColor = "red";
+        }
+        else if (values == "Green") {
+            document.getElementById("displaybody").style.backgroundColor = "green";
+        }
+
+
+
+    }
+
+
+
+</script>

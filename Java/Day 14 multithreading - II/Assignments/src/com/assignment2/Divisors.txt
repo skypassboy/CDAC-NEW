@@ -1,0 +1,1 @@
+divisors of number : 120 are 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 30, 40, 60, 120,divisors of number : 650 are 1, 2, 5, 10, 13, 25, 26, 50, 65, 130, 325, 650,divisors of number : 250 are 1, 2, 5, 10, 25, 50, 125, 250,

@@ -1,0 +1,16 @@
+public class point{
+	
+	public static void main(String args[]){
+
+		Point p1 = new Point();
+		P1.coordinates();
+		
+		System.out.println("********************************");
+
+		Point p2 = new Point(10,20);	
+		p2.coordinates();
+		
+	}
+	
+
+}

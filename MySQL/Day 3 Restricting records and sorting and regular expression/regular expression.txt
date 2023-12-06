@@ -1,0 +1,21 @@
+select ename from emp where  regexp_like(ename,'^a.*');
+
+select * from emp where ename regexp 'r$';
+select ename from emp where  regex_like(ename,'r$'); 
+
+select * from emp where ename regexp '[n]';
+select ename from emp where regex_like(ename,'n');
+
+select * from emp where ename regexp '^a' or  regexp '^m';
+select ename from emp where  regexp_like (ename,'^[am]');
+
+select * from emp where ename regexp '^__n';
+select ename from emp where regexp_like(ename,'^..n.*');
+
+//imp
+select ename from emp where regexp_like(ename,'a^.*s$') or regexp_like(ename,'m^.*r$') or
+regexp_like(ename,'r^.*h$');
+
+
+//imp
+select ename from emp where regexp_like(ename,'^[^f]');

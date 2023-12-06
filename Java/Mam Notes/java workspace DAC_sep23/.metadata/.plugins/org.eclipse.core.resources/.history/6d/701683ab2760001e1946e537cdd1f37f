@@ -1,0 +1,10 @@
+package iodemos;
+
+public class ConsoleInputString {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

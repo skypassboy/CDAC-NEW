@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Slide Show</title>
+    <style>
+        #maindiv {
+            width: 70%;
+
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+
+        div>div>img {
+            width: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <button onclick="left(arr)" id="leftbtn"><</button>
+                <div id="maindiv">
+                    <img id="myimg">
+                </div>
+
+                <button onclick="right(arr)" id="rightbtn">></button>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    let arr = ["1.jpg", "2.jpg", "4.jpg", "5.jpg", "6.jpg"];
+
+    let index = arr.length - 1;
+    document.getElementById("myimg").src = arr[arr.length - 1];
+
+    function left(arr) {
+
+        if (index == -1) {
+            index = arr.length - 1;
+        }
+        document.getElementById("myimg").src = arr[index];
+        index--;
+
+    }
+
+    let index1 = 0;
+
+    function right(arr) {
+
+        if (index == arr.length) {
+            index = 0;
+        }
+        document.getElementById("myimg").src = arr[index];
+        index++;
+
+    }
+
+
+
+
+
+
+</script>

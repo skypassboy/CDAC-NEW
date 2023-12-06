@@ -1,0 +1,45 @@
+package threadsync;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+//1
+public class DivisorThread implements Runnable  {
+
+	private Thread t; //2
+	private int number;
+	private FileWriter fw;	
+	
+	public DivisorThread(int number, FileWriter fw) {
+		super();
+		this.number = number;
+		this.fw = fw;
+		this.t = new Thread(this); //3
+	}
+
+	//4
+	public Thread getT()
+	{
+		return t;
+	}
+
+	//5
+	//overridden method - Runnable
+	public void run() {
+		try
+		{
+			fw.write("Divisors of "+number+" are : ");
+			for(int i=1;i<=number;i++) {
+				if(number%i == 0)
+				{
+					fw.write(""+i+" , ");
+				}
+			}
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}

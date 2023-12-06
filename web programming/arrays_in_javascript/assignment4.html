@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Assignment 4</title>
+
+</head>
+
+<body>
+    <button onclick="sortArray(arr)">Sort function by name</button>
+    <button onclick="srt(arr1)">sort anonymous</button>
+    <button onclick="srtarrow(arr2)">sort arrow</button>
+    <ul id="head1"></ul>
+    <ul id="head2"></ul>
+    <ul id="head3"></ul>
+    <ul id="head4"></ul>
+</body>
+
+</html>
+<script>
+    let arr = [4, 3, 6, 7, 8, 9, 1, 2];
+    let str = ""
+    for (i in arr) {
+        str = str + arr[i] + " ";
+    }
+    document.getElementById("head1").innerHTML = str;
+
+    function sortArray(arr) {
+
+        function mySort(a, b) {
+            return a - b;
+        }
+
+        arr.sort(mySort);
+        let bag = ""
+        for (i in arr) {
+            bag = bag +"<li>"+ arr[i] +"</li>"+ " ";
+        }
+        document.getElementById("head2").innerHTML = bag;
+
+
+
+    }
+
+
+    let arr1 = [2, 3, 1, 9, 4, 5];
+    function srt(arr1) {
+
+
+        let bag = "";
+
+        arr1.sort(function (a, b) {
+            return a - b;
+        })
+        for (i in arr1) {
+            bag = bag +"<li>"+ arr1[i] +"</li>"+ " ";
+        }
+        document.getElementById("head3").innerHTML = `${bag} using anonymous function`;
+    }
+
+
+    let arr2 = [9, 8, 7, 6, 5, 4, 3, 2, 2, 1];
+
+    function srtarrow(arr2) {
+        let bag = "";
+
+        arr2.sort(function (a, b) {
+            return a - b;
+        })
+        for (i in arr2) {
+            bag = bag +"<li>"+ arr2[i] +"</li>"+ " ";
+        }
+        document.getElementById("head4").innerHTML = `${bag} using arrow function`;
+    }
+
+</script>

@@ -1,0 +1,34 @@
+package tests;
+
+import java.io.IOException;
+
+class A
+{
+	public void m1() throws IOException
+	{
+		
+	}
+	
+}
+
+class B extends A{
+	public void m1() {
+		
+	}
+	
+}
+
+
+
+
+
+
+
+public class OverridingRules {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

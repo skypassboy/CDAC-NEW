@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment4</title>
+    
+</head>
+
+<body>
+
+    <h1>Check Odd or Even</h1> <br>
+    <h2 id="head"></h2>
+    <form>
+
+        <input type="number" name="number" id="num">
+        <input type="button" value="submit" onclick="checkOddEven()">
+
+    </form>
+
+
+</body>
+
+</html>
+<script>
+
+
+    function checkOddEven() {
+        let number = document.getElementById("num").value;
+        console.log("in function")
+        if (number % 2 == 0) {
+            console.log(1);
+            document.getElementById("head").innerHTML = "Even";
+        }
+        else {
+            console.log(0);
+            document.getElementById("head").innerHTML = "Odd";
+        }
+
+    }
+
+</script>

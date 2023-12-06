@@ -1,0 +1,29 @@
+package threadcomm;
+
+public class Stock {
+	int qtyProduced;
+	int qtyConsumed;
+	boolean bProduced;  //true-consumer, false-producer 
+	
+	public Stock()
+	{
+		qtyProduced = qtyConsumed = 0;
+		bProduced = false;
+	}
+	
+	public void produce()
+	{
+		qtyProduced++;
+		System.out.println("Produced : "+qtyProduced);
+		
+	}
+	
+	public void consume()
+	{
+		qtyConsumed++;
+		System.out.println("Consumed : "+qtyConsumed);
+		
+	}
+	
+
+}

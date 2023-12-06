@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        
+        #display{
+            border: 1px solid black;
+            width: 100%;
+            background-color: chartreuse;
+            height: 500px;
+            display: none;
+        }
+        #buttons{
+            margin-left: 500px;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="display">
+
+    </div>
+    <div id="buttons">
+        <button>Slide Up</button>
+        <button>Slide Down</button>
+    </div>
+</body>
+</html>
+<script>
+        $(document).ready(function(){
+
+            $("button").click(function(){
+                
+                var txt = $(this).text();
+                console.log(txt);
+
+                if(txt==="Slide Up"){
+                    $("#display").slideUp(1000);
+                }
+                else{
+                    $("#display").slideDown(1000);
+                }
+
+            })
+
+
+
+        })
+</script>

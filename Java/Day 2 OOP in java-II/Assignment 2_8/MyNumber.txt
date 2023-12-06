@@ -1,0 +1,78 @@
+public class MyNumber{
+
+
+	private int no;
+	
+	public MyNumber(){
+	
+		
+	}
+	
+	public MyNumber(int no){
+
+		this.no = no;
+		
+	}
+
+	public void isNegative(){
+		
+		if(no==0){
+			System.out.println(no + " is neighter +ve nor -ve");
+		}
+		else if((no+1)>no){
+			System.out.println(no + " is negative");
+		}
+		else{
+			System.out.println(no + " is not negative");
+		}
+	
+	}
+	
+	public void isPositive(){
+		
+		if(no==0){
+			System.out.println(no + " is neighter +ve nor -ve");
+		}
+		else if((no+1)<no){
+			System.out.println(no + " is positive");
+		}
+		else{
+			System.out.println(no + " is not positive");
+		}
+	
+	}
+	
+	public void isZero(){
+		
+		if(no==0){
+			System.out.println(no + " is zero");
+		}
+		
+	}
+	
+	public void isOdd(){
+		
+		if(no%2!=0){
+			System.out.println(no + " is Odd");
+		}
+		else{
+			System.out.println(no + " is not Odd");
+		}
+	
+	}
+
+	public void isEven(){
+		
+		if(no%2==0){
+			System.out.println(no + " is Even");
+		}
+		else{
+			System.out.println(no + " is not Even");
+		}
+	
+	}
+
+
+
+
+}
