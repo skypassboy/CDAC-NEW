@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form>
+        <label for="username">Username :</label>
+        <input type="text" name="username" id="username" onblur=""><span id="info"></span><br>
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password"><br>
+        <input type="button" value="click" id="btn">
+    </form>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        alert("doc ready");
+        $("#username").blur(function () {
+            alert("onblur working...!")
+            var url = "http://localhost:9000/getEmpDetails?username=" + $("#username").val();
+            alert(url);
+            $.get(url, function (data, status) {
+                alert(status);
+                if (status == "success") {
+                    alert("done...!")
+                    
+                    if(data=="Emp already exists"){
+                        
+                        $("#info").text(data);
+                        document.getElementById("username").value = "";
+                    }
+                    else{
+                        $("#info").text(data);
+                       
+                    }
+                    // document.getElementById("username").focus();
+                }
+                else{
+
+                }
+            })
+        })
+    })
+
+
+</script>

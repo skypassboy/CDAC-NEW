@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+    <form method="get" id="fn" name="fn">
+        <input type="text" name="username" id="username">
+        <input type="button" value="Click" id="btn" onclick="makeRequest()">
+    </form>
+    <div id="details">
+
+    </div>
+</body>
+
+</html>
+<script>
+
+    function createAjaxObject() {
+        try {
+            var ajax = new XMLHttpRequest();
+            return ajax;
+        }
+        catch (e) {
+            try {
+                var ajax = ActiveXObject("Microsoft.XMLHTTP");
+                return ajax;
+            }
+            catch (e) {
+                alert("ajax is not supported...!")
+            }
+        }
+    }
+
+    function makeRequest() {
+
+        ajax = createAjaxObject();
+
+        if (ajax) {
+            alert("ajax object created");
+        }
+        
+        var user = document.fn.username.value;
+        var url = "http://localhost:9000/getdetails?username="+user;
+        alert(url);
+
+        ajax.onreadystatechange = updatePage;   
+        ajax.open("get", url, true);
+        ajax.send(" ");
+
+
+    }
+
+    function updatePage() {
+
+        alert(ajax.readyState)
+
+        if(ajax.readyState==4){
+            alert("in res"+ajax.responseText)
+            
+            document.getElementById("details").innerHTML=ajax.responseText;
+
+        }
+
+    }
+
+</script>
