@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+<body>
+    <!-- http://localhost:9000/logincheck?uid=xxx&pwd=ggg   -->
+    <!-- action(same page) method(get)-->
+    <form action="http://localhost:9000/logincheck" method="post">
+        <table>
+            <tr>
+                <td> <label for="uidtext">Enter uid : </label> </td>
+                <td> <input type="text" name="uid" id="uidtext" /> </td>
+            </tr>
+            <tr>
+                <td> <label for="pwdtext">Enter password : </label> </td>
+                <td> <input type="password" name="pwd" id="pwdtext" /> </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="LOGIN" /></td>
+                <td><input type="reset" value="CLEAR" /></td>
+            </tr>           
+            
+        </table>
+    </form>
+</body>
+</html>
