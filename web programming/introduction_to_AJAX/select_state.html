@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Registration form</h1>
+    <form>
+        <label for="state">Select State :</label>
+        <select name="" id="state">
+            <option value="">Select State</option>
+            <option value="1">Maharashtra</option>
+            <option value="2">Karnataka</option>
+            <option value="3">Rajasthan</option>
+        </select><br>
+        <label for="city">Select city :</label>
+        <select name="" id="city">
+            <option value="">select city</option>
+        </select>
+    </form>
+
+</body>
+
+</html>
+<script>
+
+    $(document).ready(function(){
+        alert("Document is Ready...!")
+
+            $("#state").change(function(){
+
+                var url = "http://localhost:9000/getCities?stateid="+$("#state").val();
+                alert(url);
+                
+                $.get(url,function(data,status){
+                    if(status=="success"){
+                        $("#city").html(data);
+                    }
+                })
+            })
+    })
+
+</script>
