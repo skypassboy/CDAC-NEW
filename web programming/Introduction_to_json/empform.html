@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Assignment 2</title>
+</head>
+
+<body>
+    <h1> Emp Form </h1>
+    <form method="post">
+        Enter Empid :
+        <input type="text" name="empno" id="empno" />
+        <br />
+        <input type="button" value="Get Details" id="b1" />
+    </form>
+    <br />
+    <div id="info"></div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        alert("doc ready");
+        $("#b1").click(function () {
+            var url = "http://localhost:9000/getEmpDetails";
+            alert(url);
+            var eno = $("#empno").val();
+            $.post(url, { empno: eno }, function (data, status) {
+                if (status == "success") {
+                    //parse data
+                    alert(data+"2");
+                    alert("1")
+                    // var emps = JSON.parse(data);
+                    emps=data;
+                    alert(emps+"1");
+                    var str = ""
+                    for (i = 0; i < emps.length; i++) {
+
+                        str += "<div>"
+                        str += "<p>Name : " + emps[i].ENAME + "</p>";
+                        str += "<p>Salary : " + emps[i].SAL + "</p>";
+                        str += "<p>Birthdate : " + emps[i].HIREDATE + "</p>";
+                        str += "</div>"
+                    }
+                    $("#info").html(str);
+                }
+            })
+        })
+    })
+</script>
