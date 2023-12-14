@@ -1,13 +1,12 @@
-import { joinPaths } from "@remix-run/router";
 import { useEffect, useState } from "react"
 
-let RestApi = () => {
+let ExpressComp = () => {
 
 
     const [fetcheddata, setData] = useState([]);
 
     useEffect(() => {
-        let url = "https://jsonplaceholder.typicode.com/users"
+        let url = "http://localhost:9000/employee"
         fetch(url)
             .then((resp) => { console.log(JSON.stringify(resp)); return resp.json() })
             .then((data) => setData(data))
@@ -18,15 +17,16 @@ let RestApi = () => {
     return (
 
         <div>
-            {/* {console.log({fetcheddata})} */}
+            {console.log({ fetcheddata })}
             <table className="table table-bordered">
                 <thead >
                     <tr>
-                        <th>Id</th>
+                        <th>Emp No</th>
                         <th>Name</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Zipcode</th>
+                        <th>Job</th>
+                        <th>Hire Date</th>
+                        <th>Salary</th>
+                        <th>Dept No</th>
                     </tr>
                 </thead>
                 {
@@ -34,11 +34,12 @@ let RestApi = () => {
                         return (
 
                             <tr >
-                                <td>{el.id}</td>
-                                <td>{el.name}</td>
-                                <td>{el.username}</td>
-                                <td>{el.email}</td>
-                                <td>{el.address.zipcode}</td>
+                                <td>{el.EMPNO}</td>
+                                <td>{el.ENAME}</td>
+                                <td>{el.JOB}</td>
+                                <td>{el.HIREDATE}</td>
+                                <td>{el.SAL}</td>
+                                <td>{el.DEPTNO}</td>
                             </tr>
 
                         )
@@ -52,4 +53,4 @@ let RestApi = () => {
 
 }
 
-export default RestApi;
+export default ExpressComp;

@@ -38,10 +38,7 @@ app.get('/employee', function (req, res) {
             res.write("</table>");
             res.end();
         }
-
     })
-
-
 
 })
 
