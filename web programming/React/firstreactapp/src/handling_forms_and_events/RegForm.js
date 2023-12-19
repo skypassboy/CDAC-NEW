@@ -112,6 +112,7 @@ let RegForm = () => {
           }}
         />
       </form>
+      <h5> {JSON.stringify(user)} </h5>
       <h2 id="head"></h2>
     </div>
   );

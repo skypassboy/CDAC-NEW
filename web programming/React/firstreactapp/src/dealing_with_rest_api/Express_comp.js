@@ -6,18 +6,29 @@ let ExpressComp = () => {
     const [fetcheddata, setData] = useState([]);
 
     useEffect(() => {
-        let url = "http://localhost:9000/employee"
+        let url = "http://localhost:9000/emp"
         fetch(url)
             .then((resp) => { console.log(JSON.stringify(resp)); return resp.json() })
             .then((data) => setData(data))
     }, [])
 
+    // useEffect(() => {
+    //     let url = "http://localhost:9001/employee";
 
+    //     fetch(url)
+    //         .then((resp) => {
+    //             if (!resp.ok) {
+    //                 throw new Error(`Network response was not ok: ${resp.status}`);
+    //             }
+    //             return resp.json();
+    //         })
+    //         .then((data) => setData(data))
+    //         .catch((error) => console.error("Fetch error:", error));
+    // }, []);
 
     return (
 
         <div>
-            {console.log({ fetcheddata })}
             <table className="table table-bordered">
                 <thead >
                     <tr>
@@ -34,6 +45,7 @@ let ExpressComp = () => {
                         return (
 
                             <tr >
+
                                 <td>{el.EMPNO}</td>
                                 <td>{el.ENAME}</td>
                                 <td>{el.JOB}</td>

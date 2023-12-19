@@ -1,0 +1,7 @@
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\bin\Debug\CSharp Basics.exe.config
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\bin\Debug\CSharp Basics.exe
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\bin\Debug\CSharp Basics.pdb
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\obj\Debug\CSharp Basics.csproj.AssemblyReference.cache
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\obj\Debug\CSharp Basics.csproj.CoreCompileInputs.cache
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\obj\Debug\CSharp Basics.exe
+C:\Users\Ritesh\Desktop\CDAC-NEW\C#.net\CSharp Basics\CSharp Basics\obj\Debug\CSharp Basics.pdb

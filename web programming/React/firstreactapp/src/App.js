@@ -17,7 +17,7 @@ import RestApi from './dealing_with_rest_api/Rest_Api';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ExpressComp from './dealing_with_rest_api/Express_comp.js';
-
+import FormValidation from './post_request_component/PostComponent.js';
 const movies = [
   {
     "Title": "They Shall Not Grow Old",
@@ -462,6 +462,7 @@ function App() {
         <Link to="/react_routing_set">Add Name</Link>
         <Link to="/react_routing_get">Show Name</Link>
         <Link to="/express_server">Express Server</Link>
+        <Link to='/save_emp'>Save Employee</Link>
       </div>
       {/* <Link to="/RegForm">Registration Form</Link> */}
       <Routes>
@@ -471,8 +472,9 @@ function App() {
         <Route path='/react_routing_set' element={<LocalStorageSet />} />
         <Route path='/react_routing_get' element={<LocalStorageGet />} />
         <Route path='/express_server' element={<ExpressComp />} />
+        <Route path='/save_emp' element={<FormValidation />} />
       </Routes>
-      <h>{"******************************************************************************************************************"}</h>
+      <h5>{"******************************************************************************************************************"}</h5>
       <RestApi />
 
     </div>
